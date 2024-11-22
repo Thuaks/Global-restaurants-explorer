@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "ecf6ab24-0f4b-48dc-9663-bf1a0ab3d7a9",
+		"name": "Global Restaurants Explorer",
+		"description": "API collection for managing restaurant and cuisine data.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33431130"
+	},
+	"item": [
+		{
+			"name": "Add New Restaurant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"year\": 2024,\r\n  \"rank\": 1,\r\n  \"restaurant\": \"El Bulli\",\r\n  \"location\": \"Roses\",\r\n  \"country\": \"Spain\",\r\n  \"lat\": 42.2639489,\r\n  \"lng\": 3.1795528,\r\n  \"cuisine\": \"Spanish\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/restaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve All Restaurants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/restaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Restaurants by Location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/restaurants?location=Roses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"restaurants"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "Roses"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Restaurant",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"restaurant\": \"El Bulli Updated\",\r\n  \"location\": \"Madrid\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/restaurants/6728741ea4c82156c0e7d536",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"restaurants",
+						"6728741ea4c82156c0e7d536"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Restaurant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/restaurants/6728741ea4c82156c0e7d536",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"restaurants",
+						"6728741ea4c82156c0e7d536"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Cuisines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/cuisines",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cuisines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Restaurants by Cuisine",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/cuisines/Spanish/restaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cuisines",
+						"Spanish",
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
